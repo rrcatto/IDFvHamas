@@ -12,7 +12,10 @@ Validated on 6 October 2026 in WSL Ubuntu with Node.js 24, Babylon.js 9.28.0, Ha
 | Cover and lean controls (`cover-controls.mjs`) | 8 / 8 pass |
 | Weapon controls (`weapon-controls.mjs`) | 11 / 11 pass |
 | Real mouse input (`mouse-input.mjs`) | Chromium 10 / 10. Firefox 10 / 10 on re-run; one earlier Firefox run timed out at the fullscreen step |
-| Production build (`npm run build`) | Pass |
+| Production build (`npm run build`) | Pass; `dist/` is 47 MB |
+| Production smoke (`PRODUCTION=1`), Chromium via `vite preview` | 5 / 5 pass: development hooks stripped, no console errors, no external requests |
+| Production smoke, Firefox from a sub-folder (`/nested/game/`) | 5 / 5 pass, after fixing the test to wait for the wave to finish loading rather than a fixed 1.5 s |
+| Real mouse input against the production build | Chromium 10 / 10, Firefox 10 / 10 |
 
 ## Performance
 

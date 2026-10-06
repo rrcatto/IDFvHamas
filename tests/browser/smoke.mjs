@@ -36,7 +36,8 @@ try{
   await page.screenshot({path:`artifacts/${production?'production-':''}menu.png`});
   await page.getByRole('button',{name:'Play',exact:false}).first().click();
   if(production){
-    await page.waitForTimeout(1500);
+    // wait for the wave to finish loading (shaders compile behind the loading screen): input is ignored until then
+    await page.waitForFunction(()=>!document.querySelector('#hud')?.classList.contains('hidden'),null,{timeout:300000});await page.waitForTimeout(500);
     if(await page.getByRole('button',{name:'Resume',exact:true}).isVisible())await page.getByRole('button',{name:'Resume',exact:true}).click();
     assert(await evaluate(()=>!!document.pointerLockElement));
     assert(await evaluate(()=>!('__gameTest' in window)));
