@@ -1,0 +1,15 @@
+# dependencies and build output
+node_modules/
+dist/
+
+# test runs (reports, screenshots, Playwright output)
+artifacts/
+test-results/
+playwright-report/
+
+# logs and editor/OS clutter
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
