@@ -4,6 +4,12 @@
 
 IDF v Hamas is a single-player first-person shooter that runs in a desktop web browser. You play an IDF soldier fighting through three war-damaged city districts against waves of armed Hamas combatants. There is nothing to install: the game is a static web page built with [Babylon.js](https://www.babylonjs.com/), and every model, texture and sound is bundled with it.
 
+## Download
+
+**[Download IDF v Hamas v1.00](https://github.com/rrcatto/IDFvHamas/releases/download/v1.00/idf-v-hamas-v1.00.zip)** (zip, 37.5 MB)
+
+This is the ready-to-run game. Unzip it into any folder on a web server, for example `unzip idf-v-hamas-v1.00.zip -d /var/www/idfvhamas`, and open that address in a desktop browser. You don't need Node.js or npm, and it makes no outside requests. See [Build for a web server](#build-for-a-web-server) for an nginx example, and [Releases](https://github.com/rrcatto/IDFvHamas/releases) for all versions.
+
 ![Market Quarter: a fighter in the lane](docs/screenshots/market-quarter-fighter.jpg)
 
 | | |
